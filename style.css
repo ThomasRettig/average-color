@@ -20,6 +20,10 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  font-weight: 500;
+}
+
 p {
   margin-bottom: 0.6em;
 }
@@ -34,7 +38,7 @@ img {
   cursor: pointer;
   font-size: 1.5em;
   line-height: 1.5em;
-  padding: 1.5em;
+  padding: 1em;
   margin-top: 0.5em;
   user-select: none;
   transition: 0.1s;
@@ -72,7 +76,7 @@ label {
   margin: 0;
   padding: 10px;
   list-style-type: none;
-  font-family: 'Consolas', "Lucida Console", Monaco, monospace;
+  font-family: 'JetBrains Mono', 'Consolas', "Lucida Console", Monaco, monospace;
 }
 
 .box {
