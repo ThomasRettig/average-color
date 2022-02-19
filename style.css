@@ -107,7 +107,7 @@ label {
   }
 }
 
-@media (prefers-reduced-motion) {
+@media screen and (prefers-reduced-motion: reduce) {
   #target:hover {
     transform: revert;
     opacity: 0.8;
