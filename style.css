@@ -1,3 +1,7 @@
+html {
+  color-scheme: dark auto;
+}
+
 body {
   font-family: system-ui, sans-serif;
   text-align: center;
@@ -57,6 +61,7 @@ label {
   margin: 0;
   padding: 10px;
   list-style-type: none;
+  font-family: 'Consolas', "Lucida Console", Monaco, monospace;
 }
 
 .box {
@@ -79,5 +84,9 @@ label {
 
   #target {
     border: 2px dashed #aaa;
+  }
+
+  .color ul {
+    opacity: 0.9;
   }
 }
