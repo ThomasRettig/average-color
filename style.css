@@ -1,26 +1,30 @@
 body {
   background: white;
   color: black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: system-ui, sans-serif;
+  text-align: center;
   margin: 40px auto;
   max-width: 720px;
   padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   font-size: 2.5em;
   font-weight: 300;
-  text-align: center;
+  margin-bottom: 0;
 }
 
 #target {
-  border: 2px dashed #ccc;
+  border: 2px dashed #ddd;
+  border-radius: 5px;
   color: #ccc;
   cursor: pointer;
   font-size: 1.5em;
   line-height: 1.5em;
   padding: 1.5em;
-  text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -54,7 +58,6 @@ h1 {
   margin: 0;
   padding: 10px;
   list-style-type: none;
-  text-align: center;
 }
 
 .box {
@@ -63,7 +66,6 @@ h1 {
 
 #footer {
   margin: 40px 0;
-  text-align: center;
 }
 
 #upload {
