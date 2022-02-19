@@ -83,7 +83,8 @@ label {
 }
 
 #upload {
-  display: none;
+  position: absolute;
+  left: -1000px;
 }
 
 @media screen and (prefers-color-scheme: dark) {
