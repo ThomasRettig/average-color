@@ -8,13 +8,13 @@
   <body>
     <header>
       <h1>Average Colour of Image</h1>
-      <p>Finds the dominant colour in an image. Drag and drop files below to begin.</p>
+      <p>A tool to find the dominant colour in an image.</p>
     </header>
     <main id="target">
       <label for="upload" id="upload-label">Drop images here (or click to upload)</label>
-      <input type="file" id="upload" aria-labelledby="upload-label" multiple />
+      <input type="file" id="upload" aria-labelledby="upload-label" multiple autofocus />
     </main>
-    <section id="images"></section>
+    <section id="images" aria-live="polite"></section>
     <script src="average-color.js" async></script>
   </body>
 </html>
