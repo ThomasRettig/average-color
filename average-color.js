@@ -7,9 +7,10 @@ function addImage(file) {
   var extension = img.src.split('.').pop();
 
   if (extension != ("png" || "jpg" || "jpeg" || "gif")) {
-    throw `Unsupported file extension! Only PNG, JPG, JPEG, and GIF extensions are allowed.`;
+    document.getElementById('error').innerText='Unsupported file extension! Only PNG, JPG, JPEG, and GIF extensions are supported.';
+    throw `Unsupported file extension! Only PNG, JPG, JPEG, and GIF extensions are supported.`;
   };
-  
+
   img.src = URL.createObjectURL(file);
   img.onload = () => {
     var rgb = getAverageColor(img);
