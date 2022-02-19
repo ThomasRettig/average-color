@@ -22,13 +22,16 @@ p {
 #target {
   border: 2px dashed #ddd;
   border-radius: 5px;
-  color: #ccc;
   cursor: pointer;
   font-size: 1.5em;
   line-height: 1.5em;
   padding: 1.5em;
   margin-top: 0.5em;
   user-select: none;
+}
+
+label {
+  color: #ccc;
 }
 
 .row {
@@ -69,13 +72,12 @@ p {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  :not(#target) {
+  :not(#target, label) {
     color: #eee;
     background-color: #131313;
   }
 
   #target {
     border: 2px dashed #aaa;
-    color: #bbb;
   }
 }
