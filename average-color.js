@@ -1,7 +1,7 @@
 function addImage(file) {
   var element = document.createElement('div');
   element.className = 'row';
-  element.innerHTML = `<div class="cell image"><img alt="Input image"></div><div class="cell color"><div class="box" aria-description="Most dominant color"></div><ul><li class="rgb"></li><li class="hex"></li><li class="hsl"></li></ul></div>`;
+  element.innerHTML = `<div class="cell image"><h2>Input</h2><img alt="Input image"></div><div class="cell color"><h2>Output</h2><div class="box" aria-description="Most dominant color"></div><ul><li class="rgb"></li><li class="hex"></li><li class="hsl"></li></ul></div>`;
 
   var img = element.querySelector('img');
   var extension = img.src.split('.').pop();
