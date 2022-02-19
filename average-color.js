@@ -4,6 +4,12 @@ function addImage(file) {
   element.innerHTML = `<div class="cell image"><img alt="Input image"></div><div class="cell color"><div class="box" aria-description="Most dominant color"></div><ul><li class="rgb"></li><li class="hex"></li><li class="hsl"></li></ul></div>`;
 
   var img = element.querySelector('img');
+  var extension = img.src.split('.').pop();
+
+  if (extension != ("png" || "jpg" || "jpeg" || "gif")) {
+    throw `Unsupported file extension! Only PNG, JPG, JPEG, and GIF extensions are allowed.`;
+  };
+  
   img.src = URL.createObjectURL(file);
   img.onload = () => {
     var rgb = getAverageColor(img);
