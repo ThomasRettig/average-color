@@ -1,6 +1,4 @@
 body {
-  background: white;
-  color: black;
   font-family: system-ui, sans-serif;
   text-align: center;
   margin: 40px auto;
@@ -17,6 +15,10 @@ h1 {
   margin-bottom: 0;
 }
 
+p {
+  margin-bottom: 0.6em;
+}
+
 #target {
   border: 2px dashed #ddd;
   border-radius: 5px;
@@ -25,6 +27,7 @@ h1 {
   font-size: 1.5em;
   line-height: 1.5em;
   padding: 1.5em;
+  margin-top: 0.5em;
   user-select: none;
 }
 
@@ -63,4 +66,16 @@ h1 {
 
 #upload {
   display: none;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :not(#target) {
+    color: #eee;
+    background-color: #131313;
+  }
+
+  #target {
+    border: 2px dashed #aaa;
+    color: #bbb;
+  }
 }
