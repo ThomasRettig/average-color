@@ -6,11 +6,6 @@ function addImage(file) {
   var img = element.querySelector('img');
   var extension = img.src.split('.').pop();
 
-  // if (extension != ("png" || "jpg" || "jpeg" || "gif")) {
-  //   document.getElementById('error').innerHTML='Unsupported file extension! Only PNG, JPG, JPEG, and GIF extensions are supported.<br>Please refresh the page.';
-  //   throw `Unsupported file extension! Only PNG, JPG, JPEG, and GIF extensions are supported.`;
-  // };
-
   img.src = URL.createObjectURL(file);
   img.onload = () => {
     var rgb = getAverageColor(img);
