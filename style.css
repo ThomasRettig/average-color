@@ -36,6 +36,11 @@ img {
   padding: 1.5em;
   margin-top: 0.5em;
   user-select: none;
+  transition: 0.1s;
+}
+
+#target:hover {
+  transform: scale(1.02);
 }
 
 label {
@@ -83,7 +88,7 @@ label {
 
 @media screen and (prefers-color-scheme: dark) {
   :not(#target, label) {
-    color: #eee;
+    color: #ddd;
     background-color: #131313;
   }
 
