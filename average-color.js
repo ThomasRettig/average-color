@@ -1,18 +1,7 @@
 function addImage(file) {
   var element = document.createElement('div');
   element.className = 'row';
-  element.innerHTML =
-    '<div class="cell image">' +
-    '  <img />' +
-    '</div>' +
-    '<div class="cell color">' +
-    '  <div class="box"></div>' +
-    '  <ul>' +
-    '    <li class="rgb"></li>' +
-    '    <li class="hex"></li>' +
-    '    <li class="hsl"></li>' +
-    '  </ul>' +
-    '</div>';
+  element.innerHTML = `<div class="cell image"><img></div><div class="cell color"><div class="box"></div><ul><li class="rgb"></li><li class="hex"></li><li class="hsl"></li></ul></div>`;
 
   var img = element.querySelector('img');
   img.src = URL.createObjectURL(file);
