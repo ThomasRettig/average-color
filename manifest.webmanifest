@@ -7,7 +7,7 @@
     "start_url": "/",
     "name": "Average Colour",
     "description": "A tool to find the average colour in an image.",
-    "short_name": "Average Colour",
+    "short_name": "AvgColour",
     "icons": [
         {
             "src": "/icon-192x192.png",
