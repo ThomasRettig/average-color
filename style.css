@@ -50,7 +50,7 @@ img, .box {
   cursor: pointer;
   font-size: 1.5em;
   line-height: 1.5em;
-  padding: 1em;
+  padding: 0.8em;
   margin-top: 0.5em;
   user-select: none;
   transition: 0.1s;
@@ -62,7 +62,7 @@ img, .box {
 
 label {
   color: #aaa;
-  pointer-events: none;
+  pointer-events: none; /*prevent system file dialogue to be accidentally triggered twice since label overlaps with input*/
 }
 
 .row {
@@ -85,6 +85,7 @@ label {
   padding: 10px;
   list-style-type: none;
   font-family: var(--mono-font);
+  line-height: 1.65;
 }
 
 .box {
