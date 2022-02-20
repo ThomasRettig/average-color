@@ -1,15 +1,20 @@
-# [Get Average Color of Image](http://matkl.github.io/average-color)
+# Get the average colour of an image
 
-Client-side JavaScript application to get the average color of an image.
+Client-side JavaScript application to get the average colour of an image.
 
-**[Open application →](http://matkl.github.io/average-color)**
+View the demo:
++ [Netlify](https://avg-colour.netlify.app/) (integrated with the [Inline Critical CSS](https://github.com/Tom-Bonnike/netlify-plugin-inline-critical-css) plugin)
++ [Github Pages](https://thomasrettig.github.io/average-color/)
 
 ## Author
 
 **Matthias Klein**
 
-+ [http://matthiasklein.me](http://matthiasklein.me)
++ [http://matthiasklein.me](https://matthiasklein.me)
 + [https://github.com/matkl](https://github.com/matkl)
+
+**Thomas Rettig**
++ [https://thmsrttg.netlify.app](https://thmsrttg.netlify.app)
 
 ## License
 MIT
