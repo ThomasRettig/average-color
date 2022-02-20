@@ -1,3 +1,7 @@
+:root {
+  --border-radius: 5px;
+}
+
 ::selection {
   color: white;
   background-color: teal;
@@ -32,9 +36,13 @@ img {
   user-select: none;
 }
 
+img, .box {
+  border-radius: var(--border-radius);
+}
+
 #target {
   border: 2px dashed #ddd;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   font-size: 1.5em;
   line-height: 1.5em;
@@ -79,8 +87,10 @@ label {
   max-width: 100%;
 }
 
-.color {
-  padding: 0 0 0 20px;
+@media screen and (min-width: 700px) {
+  .color {
+    padding: 0 0 0 20px;
+  }
 }
 
 .color ul {
@@ -108,7 +118,7 @@ label {
     color-scheme: dark;
   }
 
-  :not(#target, label) {
+  :not(#target, label, .box) {
     color: #ddd;
     background-color: #131313;
   }
