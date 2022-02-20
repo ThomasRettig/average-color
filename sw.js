@@ -1,4 +1,4 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'cache-v1';
 
 var urlsToCache = [
   '/',
@@ -7,6 +7,8 @@ var urlsToCache = [
   'manifest.webmanifest',
   'average-color.js',
   'icon-192x192.png',
+  'sw.js',
+  'about'
 ];
 
 self.addEventListener('install', function(event) {
