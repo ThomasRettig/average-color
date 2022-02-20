@@ -1,6 +1,8 @@
 :root {
   --border-radius: 5px;
   --accent-color: teal;
+  --body-font: system-ui, sans-serif;
+  --mono-font: ui-monospace, Menlo, Monaco, "Consolas", "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
 
 ::selection {
@@ -8,8 +10,12 @@
   background-color: var(--accent-color);
 }
 
+button:focus-visible {
+  border: 0.125em solid #74c0fc;
+}
+
 body {
-  font-family: system-ui, sans-serif;
+  font-family: var(--body-font);
   text-align: center;
   margin: 40px auto;
   max-width: 720px;
@@ -64,17 +70,6 @@ label {
   display: flex;
 }
 
-@media screen and (max-width: 700px) {
-  body {
-    padding: 0 30px;
-  }
-  
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .cell {
   box-sizing: border-box;
   width: 50%;
@@ -85,21 +80,37 @@ label {
   max-width: 100%;
 }
 
-@media screen and (min-width: 700px) {
-  .color {
-    padding: 0 0 0 20px;
-  }
-}
-
 .color ul {
   margin: 0;
   padding: 10px;
   list-style-type: none;
-  font-family: 'JetBrains Mono', 'Consolas', Monaco, monospace;
+  font-family: var(--mono-font);
 }
 
 .box {
   height: 80px;
+}
+
+#add-btn {
+  border: none;
+  font-family: var(--body-font);
+  font-size: inherit;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  transition: 0.1s;
+}
+
+#add-btn > img {
+  width: 13px;
+  border-radius: 0px;
+  margin-right: 5px;
+}
+
+#add-btn:hover {
+  opacity: 1;
 }
 
 #footer {
@@ -134,5 +145,22 @@ label {
   #target:hover {
     transform: revert;
     opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding: 0 30px;
+  }
+  
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .color {
+    padding: 0 0 0 20px;
   }
 }
