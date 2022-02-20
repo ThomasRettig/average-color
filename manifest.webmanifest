@@ -1,0 +1,33 @@
+{
+    "theme_color": "#008080",
+    "background_color": "#008080",
+    "display": "minimal-ui",
+    "orientation": "any",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Average Colour",
+    "description": "A tool to find the average colour in an image.",
+    "short_name": "Average Colour",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="favicon.svg" rel="icon" type="image/svg+xml">
     <link href="style.css" rel="stylesheet">
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <!--Manifest/Icons-->
+    <meta name="theme-color" content="#008080">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <header>
@@ -20,5 +24,10 @@
     </main>
     <section id="images" aria-live="polite"></section>
     <script src="average-color.js" async></script>
+    <script>
+      if (navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
   </body>
 </html>
