@@ -13,14 +13,17 @@
       <h1>Average Colour of Image</h1>
       <p>A tool to find the average colour in an image.</p>
     </header>
-    <aside>
-      <button id="add-btn">Add to home screen</button>
-    </aside>
     <main id="target">
       <label for="upload" id="upload-label">Drop images here (or click to upload)</label>
       <input type="file" id="upload" aria-labelledby="upload-label" accept="image/png, image/jpeg, image/gif, image/jpg" multiple autofocus />
     </main>
+    <!--PWA install prompt-->
+    <aside>
+      <button id="add-btn">Add to home screen</button>
+    </aside>
+    <!--Output-->
     <section id="images"></section>
+    <!--Script begins-->
     <script src="average-color.js" async></script>
     <script>
       if (navigator && navigator.serviceWorker) {
