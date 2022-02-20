@@ -1,8 +1,11 @@
 var CACHE_NAME = 'my-site-cache-v1';
+
 var urlsToCache = [
   '/',
   'style.css',
-  'favicon.svg'
+  'favicon.svg',
+  'manifest.webmanifest',
+  'average-color.js'
 ];
 
 self.addEventListener('install', function(event) {
