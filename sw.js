@@ -1,31 +1,31 @@
-// Listen for request events
-self.addEventListener('fetch', function (event) {
+var CACHE_NAME = 'my-site-cache-v1';
+var urlsToCache = [
+  '/',
+  'style.css',
+  'favicon.svg'
+];
 
-  // Get the request
-  let request = event.request;
+self.addEventListener('install', function(event) {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
 
-  // Bug fix
-  // https://stackoverflow.com/a/49719964
-  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
-
-  // HTML files
-  // Network-first
-  if (request.headers.get('Accept').includes('text/html')) {
-    // Handle HTML files...
-    return;
-  }
-
-  // CSS & JavaScript
-  // Offline-first
-  if (request.headers.get('Accept').includes('text/css') || request.headers.get('Accept').includes('text/javascript')) {
-    // Handle CSS and JavaScript files...
-    return;
-  }
-
-  // Images
-  // Offline-first
-  if (request.headers.get('Accept').includes('image')) {
-    // Handle images...
-  }
-
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
 });
