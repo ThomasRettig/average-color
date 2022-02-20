@@ -5,7 +5,8 @@ var urlsToCache = [
   'style.css',
   'favicon.svg',
   'manifest.webmanifest',
-  'average-color.js'
+  'average-color.js',
+  'icon-192x192.png'
 ];
 
 self.addEventListener('install', function(event) {
