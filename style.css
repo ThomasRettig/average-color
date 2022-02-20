@@ -10,8 +10,8 @@
   background-color: var(--accent-color);
 }
 
-button:focus-visible {
-  border: 0.125em solid #74c0fc;
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -94,6 +94,7 @@ label {
 #add-btn {
   border: none;
   font-family: var(--body-font);
+  background-color: transparent;
   font-size: inherit;
   cursor: pointer;
   opacity: 0.8;
