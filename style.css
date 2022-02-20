@@ -34,10 +34,6 @@ p {
   margin-bottom: 0.6em;
 }
 
-img {
-  user-select: none;
-}
-
 img, .box {
   border-radius: var(--border-radius);
 }
@@ -85,7 +81,7 @@ label {
 }
 
 .image img {
-  display: block;
+  user-select: none;
   max-width: 100%;
 }
 
