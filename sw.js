@@ -6,7 +6,8 @@ var urlsToCache = [
   'favicon.svg',
   'manifest.webmanifest',
   'average-color.js',
-  'icon-192x192.png',
+  'icon-192x192.png', // Default favicon size fetched by Chrome
+  'icon-512x512.png', // Apple touch icon
   'sw.js',
   'about'
 ];
