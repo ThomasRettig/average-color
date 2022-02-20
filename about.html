@@ -9,23 +9,22 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
-    <header>
-      <h1>Average Colour of Image</h1>
-      <p>A tool to find the average colour in an image.</p>
-    </header>
-    <main id="target">
-      <label for="upload" id="upload-label">Drop images here (or click to upload)</label>
-      <input type="file" id="upload" aria-labelledby="upload-label" accept="image/png, image/jpeg, image/gif, image/jpg" multiple autofocus />
+    <main>
+      <h1>About this app</h1>
+      <p>This website is a simple tool to find out the average colour in an image. It started out as a fork of an <a href="https://github.com/matkl/average-color">old repository</a> which is no longer being actively maintained. You may find the source code on Github <a href="https://github.com/thomasRettig/average-color">here</a>.</p>
+      <p><a href="..">Go back home→</a></p>
     </main>
+    <style>
+      p {
+        max-width: 450px;
+      }
+    </style>
     <!--PWA install prompt-->
     <aside>
         <button id="add-btn">Add to home screen</button>
         <a href="about" id="about-btn">About</a>
     </aside>
-    <!--Output-->
-    <section id="images"></section>
     <!--Script begins-->
-    <script src="average-color.js" async></script>
     <script>
       if (navigator && navigator.serviceWorker) {
         navigator.serviceWorker.register('sw.js');

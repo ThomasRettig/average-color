@@ -1,6 +1,7 @@
 :root {
   --border-radius: 5px;
   --accent-color: teal;
+  --accent-color-light: #a4f0f0;
   --body-font: system-ui, sans-serif;
   --mono-font: ui-monospace, Menlo, Monaco, "Consolas", "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
@@ -26,8 +27,9 @@ body {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: clamp(1.5rem, 10vw, 2.5rem);
   font-weight: 300;
+  line-height: 1.2;
   margin-bottom: 0;
 }
 
@@ -92,17 +94,36 @@ label {
   height: 80px;
 }
 
-#add-btn {
+button, a {
   border: none;
-  font-family: var(--body-font);
-  background-color: transparent;
   font-size: inherit;
   cursor: pointer;
+  transition: 0.1s;
+}
+
+a {
+  color: var(--accent-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--body-font);
+  background-color: transparent;
+  padding: 0;
   opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+aside {
+  display: flex;
+  gap: 0.75em;
   position: fixed;
   bottom: 15px;
   left: 15px;
-  transition: 0.1s;
 }
 
 #add-btn > img {
@@ -111,37 +132,55 @@ label {
   margin-right: 5px;
 }
 
-#add-btn:hover {
-  opacity: 1;
-}
-
 #footer {
   margin: 40px 0;
 }
 
 #upload {
   position: absolute;
-  left: -1000px;
+  left: -9999px;
 }
+
+/*dark mode*/
 
 @media screen and (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 
-  :not(#target, label, .box) {
+  :not(#target, label, .box, a) {
     color: #ddd;
     background-color: #131313;
   }
 
+  a {
+    font-weight: 400;
+    color: var(--accent-color-light);
+  }
+
+  a[href="about"] {
+    color: #ddd;
+    opacity: 0.8;
+  }
+
   #target {
-    border: 2px dashed #aaa;
+    border: 2px dashed #646464;
   }
 
   .color ul {
     opacity: 0.9;
   }
 }
+
+@media screen and (prefers-color-scheme: light) {
+  #about-btn {
+      font-weight: 400;
+      color: inherit;
+      opacity: 0.8;
+  }
+}
+
+/*reduced motion*/
 
 @media screen and (prefers-reduced-motion: reduce) {
   #target:hover {
