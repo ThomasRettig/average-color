@@ -1,10 +1,11 @@
 :root {
   --border-radius: 5px;
+  --accent-color: teal;
 }
 
 ::selection {
   color: white;
-  background-color: teal;
+  background-color: var(--accent-color);
 }
 
 body {
@@ -98,7 +99,7 @@ label {
   margin: 0;
   padding: 10px;
   list-style-type: none;
-  font-family: 'JetBrains Mono', 'Consolas', "Lucida Console", Monaco, monospace;
+  font-family: 'JetBrains Mono', 'Consolas', Monaco, monospace;
 }
 
 .box {
