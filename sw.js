@@ -1,12 +1,12 @@
-var CACHE_NAME = 'cache-v1';
+var CACHE = 'cache-v1';
 
-var urlsToCache = [
+var urls = [
   '/',
   'style.css',
   'favicon.svg',
   'manifest.webmanifest',
   'average-color.js',
-  'icon-192x192.png', // Default favicon size fetched by Chrome
+  'icon-192x192.png', // Default favicon size fetched by Chrome on desktop
   'apple-touch-icon-512x512.png', // Apple touch icon
   'sw.js',
   'about'
@@ -15,9 +15,9 @@ var urlsToCache = [
 self.addEventListener('install', function(event) {
   // Perform install steps
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(CACHE)
       .then(function(cache) {
-        return cache.addAll(urlsToCache);
+        return cache.addAll(urls);
       })
   );
 });
