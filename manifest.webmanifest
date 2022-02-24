@@ -8,6 +8,24 @@
     "name": "Average Colour",
     "description": "A tool to find the average colour in an image.",
     "short_name": "AvgColour",
+    "shortcuts": [
+        {
+          "name": "Homepage",
+          "short_name": "Home",
+          "description": "Homepage",
+          "url": "/",
+          "icons": [
+                { "src": "home-icon-192x192.png", "sizes": "192x192" }
+            ]
+        },
+        {
+          "name": "About this app",
+          "short_name": "About",
+          "description": "View information regarding this app",
+          "url": "/about",
+          "icons": [{ "src": "about-icon-192x192.png", "sizes": "192x192" }]
+        }
+    ],
     "icons": [
         {
             "src": "/icon-192x192.png",
