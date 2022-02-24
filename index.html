@@ -72,7 +72,6 @@
           deferredPrompt.prompt();
           // Wait for the user to respond to the prompt
           deferredPrompt.userChoice.then((choiceResult) => {
-                console.log('User accepted PWA install prompt.');
               deferredPrompt = null;
           });
         });
