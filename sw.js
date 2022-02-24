@@ -8,6 +8,8 @@ var urls = [
   'average-color.js',
   'icon-192x192.png', // Default favicon size fetched by Chrome on desktop
   'apple-touch-icon-512x512.png', // Apple touch icon
+  'about-icon-192x192', // PWA shortcut icon
+  'home-icon-192x192', // PWA shortcut icon
   'sw.js',
   'about'
 ];
