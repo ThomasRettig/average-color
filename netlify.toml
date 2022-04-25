@@ -25,10 +25,8 @@
 
 [[plugins]]
   package = "netlify-plugin-minify-html"
-
     [plugins.inputs]
       contexts = ["production"] # only minify in production
-
     # https://github.com/kangax/html-minifier#options-quick-reference
     [plugins.inputs.minifierOptions]
       removeComments = true
