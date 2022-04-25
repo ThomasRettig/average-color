@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <title>Average Colour</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="favicon-light.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)">
-    <link href="favicon-dark.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)">
-    <link href="style.css" rel="stylesheet" inline>
-    <!--SEO stuff-->
+    <link href="style.css" rel="stylesheet" inline> <!-- inlined! -->
+    <!-- SEO stuff -->
     <meta name="description" content="Average Colour is a tool to find the average colour in an image.">
     <meta name="keywords" content="PWA, tool, image">
     <meta name="author" content="Thomas Rettig">
@@ -23,7 +21,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://avg-colour.netlify.app/og-image.png">
     <meta name="twitter:image:alt" content="An eyedropper icon placed next to text containing the words &ldquo;Average Color&rsquo;">
-    <!--PWA stuff-->
+    <!-- PWA stuff -->
+    <link href="favicon-light.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link href="favicon-dark.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="apple-touch-icon-512x512.png">
     <meta name="theme-color" content="#008080">
     <link rel="manifest" href="manifest.webmanifest">
@@ -47,7 +47,6 @@
     <!--Output-->
     <section id="images"></section>
     <!--Script begins-->
-    <script src="average-color.js"></script>
     <script>
       // register our service worker
       if (navigator && navigator.serviceWorker) {
@@ -78,5 +77,6 @@
         });
       });
     </script>
+    <script src="average-color.js" inline></script>
   </body>
 </html>
