@@ -94,11 +94,11 @@ document.ondrop = function(event) {
   var upload = document.getElementById("upload");
   var target = document.getElementById("target");
 
-  upload.onchange = () => {
+  upload.onchange = function() {
     handleImages(this.files);
   };
 
-  target.onclick = () => {
+  target.onclick = function() {
     upload.click();
   };
 })();
