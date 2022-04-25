@@ -4,7 +4,8 @@
   "description": "Get average color of image",
   "main": "average-color.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node live-server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/ThomasRettig/average-color#readme",
   "devDependencies": {
+    "i": "^0.3.7",
+    "live-server": "^1.2.1",
     "netlify-plugin-inline-source": "^1.0.4",
     "netlify-plugin-minify-html": "^0.3.1"
   }
