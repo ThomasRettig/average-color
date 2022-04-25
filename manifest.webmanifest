@@ -15,7 +15,7 @@
           "description": "Homepage",
           "url": "/",
           "icons": [
-                { "src": "home-icon-192x192.png", "sizes": "192x192" }
+                { "src": "icons/home-icon-192x192.png", "sizes": "192x192" }
             ]
         },
         {
@@ -23,27 +23,27 @@
           "short_name": "About",
           "description": "View information regarding this app",
           "url": "/about",
-          "icons": [{ "src": "about-icon-192x192.png", "sizes": "192x192" }]
+          "icons": [{ "src": "icons/about-icon-192x192.png", "sizes": "192x192" }]
         }
     ],
     "icons": [
         {
-            "src": "/icon-192x192.png",
+            "src": "icons/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icon-256x256.png",
+            "src": "icons/icon-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/icon-384x384.png",
+            "src": "icons/icon-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "/icon-512x512.png",
+            "src": "icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
