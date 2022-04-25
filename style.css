@@ -78,8 +78,9 @@ label {
 }
 
 .image img {
+  display: block;
   cursor: zoom-in;
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease;
   user-select: none;
   max-width: 100%;
 }
