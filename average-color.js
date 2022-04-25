@@ -1,32 +1,32 @@
 function addImage(file) {
-  var element = document.createElement('div');
-  element.className = 'row';
+  var element = document.createElement("div");
+  element.className = "row";
   element.innerHTML = `<div class="cell image"><h2>Input</h2><img alt="Input image"></div><div class="cell color"><h2>Output</h2><div class="box" aria-description="Most dominant color"></div><ul><li class="rgb"></li><li class="hex"></li><li class="hsl"></li></ul></div>`;
 
-  var img = element.querySelector('img');
+  var img = element.querySelector("img");
 
   img.src = URL.createObjectURL(file);
   img.onload = () => {
     var rgb = getAverageColor(img);
     var hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
     var rgbStr = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
-    var hexStr = `#${('0'+rgb.r.toString(16)).slice(-2)}${('0'+rgb.g.toString(16)).slice(-2)}${('0'+rgb.b.toString(16)).slice(-2)}`;
+    var hexStr = `#${("0"+rgb.r.toString(16)).slice(-2)}${("0"+rgb.g.toString(16)).slice(-2)}${("0"+rgb.b.toString(16)).slice(-2)}`;
     var hslStr = `hsl(${Math.round(hsl.h * 360)}%, ${Math.round(hsl.s * 100)}%, ${Math.round(hsl.l * 100)}%)`;
 
-    var box = element.querySelector('.box');
+    var box = element.querySelector(".box");
     box.style.backgroundColor = rgbStr;
 
-    element.querySelector('.rgb').textContent = rgbStr;
-    element.querySelector('.hex').textContent = hexStr;
-    element.querySelector('.hsl').textContent = hslStr;
+    element.querySelector(".rgb").textContent = rgbStr;
+    element.querySelector(".hex").textContent = hexStr;
+    element.querySelector(".hsl").textContent = hslStr;
   };
 
-  document.getElementById('images').appendChild(element);
+  document.getElementById("images").appendChild(element);
 }
 
 function getAverageColor(img) {
-  var canvas = document.createElement('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.createElement("canvas");
+  var ctx = canvas.getContext("2d");
   var width = canvas.width = img.naturalWidth;
   var height = canvas.height = img.naturalHeight;
 
@@ -73,7 +73,7 @@ function rgbToHsl(r, g, b) {
 }
 
 function handleImages(files) {
-  document.getElementById('images').innerHTML = '';
+  document.getElementById("images").innerHTML = null;
 
   for (var i = 0; i < files.length; i++) {
     addImage(files[i]);
@@ -82,7 +82,7 @@ function handleImages(files) {
 
 document.ondragover = function(event) {
   event.preventDefault();
-  event.dataTransfer.dropEffect = 'copy';
+  event.dataTransfer.dropEffect = "copy";
 };
 
 document.ondrop = function(event) {
@@ -91,14 +91,14 @@ document.ondrop = function(event) {
 };
 
 (function() {
-  var upload = document.getElementById('upload');
-  var target = document.getElementById('target');
+  var upload = document.getElementById("upload");
+  var target = document.getElementById("target");
 
-  upload.onchange = function() {
+  upload.onchange = () => {
     handleImages(this.files);
   };
 
-  target.onclick = function() {
+  target.onclick = () => {
     upload.click();
   };
 })();

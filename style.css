@@ -18,7 +18,7 @@ html {
 body {
   font-family: var(--body-font);
   text-align: center;
-  margin: 40px auto;
+  margin: 35px auto;
   max-width: 720px;
   padding: 0 40px;
   display: flex;
@@ -78,8 +78,13 @@ label {
 }
 
 .image img {
+  transition: transform 0.25s ease;
   user-select: none;
   max-width: 100%;
+}
+
+.image img:active {
+  transform: scale(1.25);
 }
 
 .color ul {
@@ -124,12 +129,6 @@ aside {
   position: fixed;
   bottom: 15px;
   left: 15px;
-}
-
-#add-btn > img {
-  width: 13px;
-  border-radius: 0px;
-  margin-right: 5px;
 }
 
 #footer {
