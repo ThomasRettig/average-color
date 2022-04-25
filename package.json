@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ThomasRettig/average-color#readme",
   "devDependencies": {
+    "netlify-plugin-inline-source": "^1.0.4",
     "netlify-plugin-minify-html": "^0.3.1"
   }
 }

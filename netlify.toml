@@ -24,6 +24,16 @@
     Cache-Control = "public, max-age=604800"
 
 [[plugins]]
+  package = "netlify-plugin-inline-source"
+
+  [plugins.inputs]
+    attribute = "inline"
+    compress = true
+    pretty = false
+    ignore = []
+    svgAsImage = false
+
+[[plugins]]
   package = "netlify-plugin-minify-html"
     [plugins.inputs]
       contexts = ["production"] # only minify in production
