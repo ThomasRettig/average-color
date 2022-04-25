@@ -4,7 +4,7 @@
     Cache-Control = "max-age=0, must-revalidate, public"
 
 [[headers]]
-  for = ".webmanifest"
+  for = "*.webmanifest"
   [headers.values]
     Cache-Control = "max-age=0, must-revalidate, public"
 
@@ -15,5 +15,10 @@
 
 [[headers]]
   for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.svg"
   [headers.values]
     Cache-Control = "public, max-age=604800"
