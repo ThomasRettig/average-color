@@ -10,5 +10,5 @@ var params = {
 
 liveServer.start(params);
 
-console.log("\x1b[32m", "Live server successfully started at https://localhost:8080/");
+console.log("\x1b[32m", "Live server successfully started at http://127.0.0.1:8080/");
 console.log("\x1b[0m", "") // reset terminal colour
