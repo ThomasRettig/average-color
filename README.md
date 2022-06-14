@@ -8,6 +8,10 @@ View the demo:
 + [Netlify](https://avg-colour.netlify.app/)
 + [Github Pages](https://thomasrettig.github.io/average-color/)
 
+Check it out on the Project Fugu API showcase:
+
+https://developer.chrome.com/blog/fugu-showcase/?api=add-to-home-screen#avg-colour.netlify.app
+
 ## Author
 
 **Matthias Klein**
